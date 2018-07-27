@@ -22,6 +22,11 @@ namespace temp
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<IdbContext>();
                 var repo = services.GetRequiredService<IRepository>();
+
+                Console.WriteLine("=======================");
+                Console.WriteLine($"Program.cs > {context}");
+                Console.WriteLine($"Program.cs > {repo}");
+                Console.WriteLine("=======================");
             }
 
             host.Run();
